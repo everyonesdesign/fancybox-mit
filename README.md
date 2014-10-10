@@ -1,4 +1,4 @@
-fancybox
+fancybox-mit
 ========
 
-old fancybox with free MIT license
+old-school fancybox with free MIT license remade
