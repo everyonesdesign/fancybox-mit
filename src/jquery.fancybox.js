@@ -1,4 +1,3 @@
-//todo: move rel attribute usage to data-rel (more valid)
 //todo: move dependencies like mousewheel or easing to subrepos
 
 ;
@@ -794,13 +793,12 @@
                 selectedArray = [];
                 selectedIndex = 0;
 
-                var rel = $(this).attr('rel') || '';
+                var rel = $(this).attr('rel') || $(this).attr('data-rel') || '';
 
-                if (!rel || rel == '' || rel === 'nofollow') {
+                if (!rel || rel === 'nofollow') {
                     selectedArray.push(this);
-
                 } else {
-                    selectedArray = $("a[rel=" + rel + "], area[rel=" + rel + "]");
+                    selectedArray = $("a, area").filter("[rel='"+rel+"'],[data-rel='"+rel+"']");
                     selectedIndex = selectedArray.index(this);
                 }
 
