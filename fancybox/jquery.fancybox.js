@@ -1,4 +1,3 @@
-//todo: inline don't work good when clicked twice
 //todo: move rel attribute usage to data-rel (more valid)
 
 ;
@@ -151,8 +150,8 @@
 
             tmp.css('padding', (selectedOpts.padding + selectedOpts.margin));
 
-            $('.fancybox-inline-tmp').off('fancybox-cancel').on('fancybox-change', function () {
-                $(this).replaceWith(content.children());
+            $(document).on('fancybox-change', function () {
+                $('.fancybox-inline-tmp').replaceWith(content.children());
             });
 
             switch (type) {
@@ -169,12 +168,10 @@
 
                     $('<div class="fancybox-inline-tmp" />')
                         .hide()
-                        .insertBefore($(obj))
-                        .on('fancybox-cleanup',function () {
-                            $(this).replaceWith(content.children());
-                        }).on('fancybox-cancel', function () {
-                            $(this).replaceWith(tmp.children());
-                        });
+                        .insertBefore($(obj));
+                    $(document).on('fancybox-cleanup fancybox-cancel', function () {
+                        $('.fancybox-inline-tmp').replaceWith(content.children());
+                    });
 
                     $(obj).appendTo(tmp);
 
@@ -344,8 +341,8 @@
                         $('select:not(#fancybox-tmp select)').filter(function () {
                             return this.style.visibility !== 'hidden';
                         }).css({'visibility': 'hidden'}).one('fancybox-cleanup', function () {
-                                this.style.visibility = 'inherit';
-                            });
+                            this.style.visibility = 'inherit';
+                        });
                     }
 
                     overlay.show();
