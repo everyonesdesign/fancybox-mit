@@ -1,4 +1,4 @@
-//todo: mousewheel don't work
+//todo: inline don't work good when clicked twice
 //todo: move rel attribute usage to data-rel (more valid)
 
 ;
