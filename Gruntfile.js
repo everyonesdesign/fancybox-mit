@@ -22,6 +22,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+        connect: {
+            server: {
+                options: {
+                    port: 8000, // http://localhost:8000/example/
+                    hostname: 'localhost',
+                    keepalive: true
+                }
+            }
+        },
         watch: {
             files: "src/*",
             tasks: ['copy', 'uglify']
@@ -31,8 +40,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('serve', ['connect']);
     grunt.registerTask('run', ['copy', 'uglify']);
 
 };
