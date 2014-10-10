@@ -31,6 +31,11 @@ h1 span {
 	letter-spacing: -0.05em;
 }
 
+h1 sub {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 hr {
 	border: none;
 	height: 1px; line-height: 1px;
