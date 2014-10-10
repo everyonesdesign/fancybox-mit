@@ -1,0 +1,28 @@
+{
+  "name": "fancybox",
+  "version": "1.0.0",
+  "description": "fancybox-mit\r ========",
+  "main": "src/jquery.fancybox.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everyonesdesign/fancybox-mit.git"
+  },
+  "author": "yura.trambitskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/everyonesdesign/fancybox-mit/issues"
+  },
+  "homepage": "https://github.com/everyonesdesign/fancybox-mit",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
