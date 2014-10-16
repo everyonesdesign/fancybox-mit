@@ -996,6 +996,11 @@
             }, typeof arguments[0] == 'number' ? arguments[0] : 200);
     };
 
+    $.fancybox.update = function () {
+        $.fancybox.resize();
+        $.fancybox.center();
+    };
+
     $.fancybox.init = function () {
         if ($("#fancybox-wrap").length) {
             return;
