@@ -4,17 +4,36 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="bower_components/foundation/css/normalize.css"/>
   <link rel="stylesheet" type="text/css" href="bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+
   <title>Fancybox Mit</title>
+
+  <style type="text/css">
+      /*todo: move this to sep file*/
+      .sub-nav {
+          max-width: 61em;
+          margin: auto;
+      }
+  </style>
 </head>
 <body>
     <div class="row">
         <div class="small-12">
-            <h1>Fancybox Mit Docs</h1>
+            <div data-magellan-expedition="fixed">
+              <dl class="sub-nav">
+                <dd data-magellan-arrival="o1"><a href="#o1">Options</a></dd>
+                <dd data-magellan-arrival="o2"><a href="#o2">Advanced</a></dd>
+                <dd data-magellan-arrival="o3"><a href="#o3">Public methods</a></dd>
+              </dl>
+            </div>
+            <h2>Fancybox Mit Docs</h2>
         </div>
     </div>
     <div class="row">
 
         <div class="small-12">
+
+            <h3 data-magellan-destination="o1" id="o1">Options</h3>
 
             <table width="100%" class="options">
                 <thead>
@@ -47,7 +66,7 @@
                 </tr>
                 <tr>
                     <td>cyclic</td>
-                    <td>false</td>
+                    <td>true</td>
                     <td>When true, galleries will be cyclic, allowing you to keep pressing next/back.</td>
                 </tr>
                 <tr class="sep even">
@@ -211,7 +230,7 @@
         </div>
         <div class="small-12">
 
-            <h2>Advanced options</h2>
+            <h3 data-magellan-destination="o2" id="o2">Advanced options</h3>
 
             <table width="100%" class="options" cellpadding="0" cellspacing="0">
                 <thead>
@@ -250,7 +269,7 @@
         </div>
         <div class="small-12">
 
-            <h2>Public methods</h2>
+            <h3 data-magellan-destination="o3" id="o3">Public methods</h3>
 
             <table width="100%" class="options" cellpadding="0" cellspacing="0">
                 <thead>
@@ -296,10 +315,20 @@
                     <td>$.fancybox.center</td>
                     <td>Centers FancyBox in viewport</td>
                 </tr>
+                <tr>
+                    <td>$.fancybox.update</td>
+                    <td>Alias for $.fancybox.resize and $.fancybox.center</td>
+                </tr>
                 </tbody>
             </table>
         </div>
 
     </div>
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
+  <script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+  <script type="text/javascript">$(document).foundation();</script>
+
 </body>
 </html>
