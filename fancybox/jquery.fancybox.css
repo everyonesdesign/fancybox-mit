@@ -63,7 +63,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1102;
-    border: 0 solid #fff;
+    border: 0px solid #fff;
 }
 
 #fancybox-hide-sel-frame {
@@ -82,7 +82,7 @@
     right: -15px;
     width: 30px;
     height: 30px;
-    background: transparent url('images/fancybox.png') -40px 0;
+    background: transparent url('images/fancybox.png') -40px 0px;
     cursor: pointer;
     z-index: 1103;
     display: none;
@@ -115,7 +115,7 @@
 
 #fancybox-left, #fancybox-right {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     height: 100%;
     width: 35%;
     cursor: pointer;
@@ -126,11 +126,11 @@
 }
 
 #fancybox-left {
-    left: 0;
+    left: 0px;
 }
 
 #fancybox-right {
-    right: 0;
+    right: 0px;
 }
 
 #fancybox-left-ico, #fancybox-right-ico {
@@ -197,7 +197,7 @@
     right: -20px;
     height: 100%;
     background-image: url('images/fancybox-y.png');
-    background-position: -20px 0;
+    background-position: -20px 0px;
 }
 
 #fancybox-bg-se {
@@ -212,7 +212,7 @@
     left: 0;
     width: 100%;
     background-image: url('images/fancybox-x.png');
-    background-position: 0 -20px;
+    background-position: 0px -20px;
 }
 
 #fancybox-bg-sw {
@@ -237,7 +237,7 @@
 }
 
 #fancybox-title {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Helvetica;
     font-size: 12px;
     z-index: 1102;
 }
@@ -297,7 +297,7 @@
     line-height: 29px;
     font-weight: bold;
     padding: 0 0 3px 0;
-    background: url('images/fancybox-x.png') 0 -40px;
+    background: url('images/fancybox-x.png') 0px -40px;
 }
 
 #fancybox-title-float-right {
@@ -305,7 +305,30 @@
     background: url('images/fancybox.png') -55px -90px no-repeat;
 }
 
-/* IE7, IE8 */
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_close.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+    height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+    position: absolute; margin-top: 0;
+    top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
 
 .fancybox-ie .fancybox-bg { background: transparent !important; }
 

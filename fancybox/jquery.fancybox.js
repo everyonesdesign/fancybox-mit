@@ -1068,7 +1068,7 @@
         margin: 40,
         opacity: false,
         modal: false,
-        cyclic: false,
+        cyclic: true,
         scrolling: 'auto',	// 'auto', 'yes' or 'no'
 
         width: 560,
