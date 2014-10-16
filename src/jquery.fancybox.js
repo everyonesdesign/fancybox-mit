@@ -147,10 +147,6 @@
 
             tmp.css('padding', (selectedOpts.padding + selectedOpts.margin));
 
-            $(document).on('fancybox-change', function () {
-                $('.fancybox-inline-tmp').replaceWith(content.children());
-            });
-
             switch (type) {
                 case 'html' :
                     tmp.html(selectedOpts.content);
@@ -163,14 +159,7 @@
                         return;
                     }
 
-                    $('<div class="fancybox-inline-tmp" />')
-                        .hide()
-                        .insertBefore($(obj));
-                    $(document).on('fancybox-cleanup fancybox-cancel', function () {
-                        $('.fancybox-inline-tmp').replaceWith(content.children());
-                    });
-
-                    $(obj).appendTo(tmp);
+                    $(obj).clone().appendTo(tmp);
 
                     _process_inline();
                     break;
