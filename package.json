@@ -1,0 +1,19 @@
+{
+  "name": "fancyboxMitDocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everyonesdesign/fancybox-mit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/everyonesdesign/fancybox-mit/issues"
+  },
+  "homepage": "https://github.com/everyonesdesign/fancybox-mit"
+}
