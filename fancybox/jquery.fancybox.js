@@ -539,7 +539,7 @@
         },
 
         _finish = function () {
-            if (!$.support.opacity) {
+            if (typeof Modernizr !== 'undefined'&&!Modernizr.opacity) {
                 content.get(0).style.removeAttribute('filter');
                 wrap.get(0).style.removeAttribute('filter');
             }
@@ -1051,7 +1051,7 @@
             });
         }
 
-        if (!$.support.opacity) {
+        if (typeof Modernizr !== 'undefined'&&!Modernizr.opacity) {
             wrap.addClass('fancybox-ie');
         }
 
